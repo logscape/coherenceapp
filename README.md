@@ -12,6 +12,13 @@ Monitor hundreds of Coherence nodes using the CoherenceApp. The Coherence App wi
 
 ## QuickStart
 
+Make sure that you have the following [prerequisites](docs/prerequisites.md) 
+Before getting started with the Coherence App you will need to:
+
+1. Download the CoherenceApp and Overrides file.( CoherenceApp Download Page ). 
+2. Configure your overrides for your Coherence Cache (Click here for more information).
+3. Configure your Datasources to point to your Coherence Log data ( Setting up the Datasources ) .
+
 
 ![](docs/images/unx_home_0.png) 
 # Overview
