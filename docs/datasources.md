@@ -2,12 +2,12 @@
 ---
 Point your Datasource to the folder where the jmx reports are being generated
 
- ![](docs/images/ds-jmxreporter-0.png)
+ ![](/images/ds-jmxreporter-0.png)
 
  * Use the line break rule: "SingleLine"
  * Rolling Convention: Enabled
 
- ![](docs/images/ds-jmxreporter-1.png)
+ ![](/images/ds-jmxreporter-1.png)
 
 
 ## Datasource - Coherence Log4j files
