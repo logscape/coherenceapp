@@ -17,11 +17,15 @@ Oracle JMX Reporting provides insight into what your Coherence Cluster is doing
 Metrics on  memory utilization of your Cohereence  Cluster  is provided by enabling ConcurrenctMarkSweep for the garbage collector. This follow [Oracle Best Practices](http://coherence.oracle.com/display/COH35UG/Best+Practices#BestPractices-HeapSizeConsiderations)
 
 Set up the following system property:
-	Use the system property: -XX:+UseConcMarkSweepGC.
+
+	-XX:+UseConcMarkSweepGC.
+
 ### Set up Coherence for GC logging
-iCoherence can redirect output from stdout to a file. Add the following system property
- -Dtangosol.coherence.log=myLogFile.log.
- -Dtangocol.coherence.log=log4j 
+oiCoherence can redirect output from stdout to a file. Add the following system property
+
+	-Dtangosol.coherence.log=myLogFile.log.
+
+	-Dtangocol.coherence.log=log4j 
 
 Make sure that your log4j.properties file is in the classpath
 
