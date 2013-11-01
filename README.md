@@ -8,7 +8,7 @@ Monitor hundreds of Coherence nodes using the CoherenceApp. The Coherence App wi
 ## Downloads 
 
  * [OracleCoherenceApp-1.0.zip](https://github.com/logscape/coherenceapp/raw/master/dist/OracleCoherenceApp-1.0.zip)
- * [OracleCoherenceApp-1.0-overrides.properties](https://www.google.com)
+ * [OracleCoherenceApp-1.0-overrides.properties](https://github.com/logscape/coherenceapp/blob/master/OracleCoherenceApp-1.0-override.properties)
 
 ## QuickStart
 
