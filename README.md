@@ -16,9 +16,9 @@ Monitor hundreds of Coherence nodes using the CoherenceApp. The Coherence App wi
 
 
 1. Download the CoherenceApp and Overrides file.( CoherenceApp Download Page ). 
-2. Configure your overrides for your Coherence Cache.[How to Setup Coherence Overrides](docs/overrides.md)
-3. Configure your Datasources to point to your Coherence Log data [Setting up the Datasources](docs/datasources.md) .
+2. Configure your overrides for your Coherence Cache. Read [How to Setup Coherence Overrides](docs/overrides.md)
+3. Configure your Datasources to point to your Coherence Log data. Read [Setting up the Datasources](docs/datasources.md) .
 
 
-i![](docs/images/apphome.png) 
+![](docs/images/apphome.png) 
 
