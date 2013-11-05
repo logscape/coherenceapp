@@ -4,7 +4,12 @@
 
 Oracle JMX Reporting provides insight into what your Coherence Cluster is doing 
 
-1. You should use for management/reporting purposes a com.tangosol.net.management.MBeanConnector, passing -rmi as argument, and using with the following system properties: -Dtangosol.coherence.management.report.autostart=true -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dtangosol.coherence.management=all
+1. You should use for management/reporting purposes a com.tangosol.net.management.MBeanConnector, passing -rmi as argument, and using with the following system properties:
+
+	 -Dtangosol.coherence.management.report.autostart=true
+	 -Dcom.sun.management.jmxremote.ssl=false
+	 -Dcom.sun.management.jmxremote.authenticate=false -Dtangosol.coherence.management=all
+
 2. Your reporting node needs to be configured to use the report-all.xml default reporter configuration (contained in coherence.jar). This is done by setting the following system property: -
 	Dtangosol.coherence.management.report.configuration=config/report-all.xml
 3. The others nodes should all be running with the following system properties: -Dtangosol.coherence.management=local-only -Dtangosol.coherence.management.remote=true
