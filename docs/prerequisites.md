@@ -6,7 +6,7 @@ Oracle JMX Reporting provides insight into what your Coherence Cluster is doing
 
 1. You should use for management/reporting purposes a com.tangosol.net.management.MBeanConnector, passing -rmi as argument, and using with the following system properties:
 
-	 -Dtangosol.coherence.management.report.autostart=true
+	** -Dtangosol.coherence.management.report.autostart=true**
 	 -Dcom.sun.management.jmxremote.ssl=false
 	 -Dcom.sun.management.jmxremote.authenticate=false -Dtangosol.coherence.management=all
 
