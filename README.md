@@ -19,6 +19,26 @@ Please read how to setup Coherence before proceeding   [prerequisites](docs/prer
 2. Configure your overrides for your Coherence Cache. Read [How to Setup Coherence Overrides](docs/overrides.md)
 3. Configure your Datasources to point to your Coherence Log data. Read [Setting up the Datasources](docs/datasources.md) .
 
+ ws-coherence-services.png
+ ws-coherence-home.png
+ ws-coherence-caches.png
+ ws-coherence-logs.png
 
-![](docs/images/apphome.png) 
+##  Home 
+![](docs/images/ws-coherence-home.png) 
+
+
+## Services 
+![](docs/images/ws-coherence-services.png) 
+
+
+
+## Cache
+![](docs/images/ws-coherence-caches.png) 
+
+
+
+## Logs 
+![](docs/images/ws-coherence-logs.png) 
+
 
