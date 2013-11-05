@@ -10,7 +10,7 @@ The coherence app uses the following data sources to pull different types of log
 ## Datasource - JMXReporter 
 ---
 Point your Datasource to the folder where the jmx reports are being generated
-
+**DataSource**: coh-report-data
  ![](/images/ds-jmxreporter-0.png)
 
  * Use the line break rule: "SingleLine"
@@ -23,6 +23,7 @@ Point your Datasource to the folder where the jmx reports are being generated
 ---
 
 Point your datasource to the folder where Coherence application log data is stored. See the Oracle Web Site and the [prerequistes page](/docs/prerequisites.md) for the Coherence Log4j configuration 
+**DataSource**:coh-logs
 
  * Line break rule: Year
  * Rolling convention: Enabled
@@ -34,6 +35,7 @@ Point your datasource to the folder where Coherence application log data is stor
 ---
 
 The folder where your GC Logs are stored. 
+**DataSource**:coh-gc-logs
 
  * Line break Rule: SingleLine
  * Rolling Convention: Disabled
