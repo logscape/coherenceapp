@@ -21,7 +21,8 @@ Oracle JMX Reporting provides insight into the health of your Coherence Cluster 
 
 	An explanation of the contents of the Coherence log file data can be found [here](http://coherence.oracle.com/display/COH35UG/Analyzing+Reporter+Content).
 
-### Set up Coherence to log to file 
+
+### Set up Coherence for GC logging
 
 Metrics on  memory utilization of your Cohereence  Cluster  is provided by enabling ConcurrenctMarkSweep for the garbage collector. This follows [Oracle Best Practices](http://coherence.oracle.com/display/COH35UG/Best+Practices#BestPractices-HeapSizeConsiderations)
 
@@ -29,7 +30,7 @@ Set up the following system property:
 
 	-XX:+UseConcMarkSweepGC.
 
-### Set up Coherence for GC logging
+### Set up Coherence to log to file 
 
 Coherence should be configure to redirect output from stdout to a file. Add the following system property
 
@@ -39,6 +40,29 @@ Coherence should be configure to redirect output from stdout to a file. Add the 
 
 Make sure that your log4j.properties file is in the classpath
 
+#### Updating your Coherence logging format. 
+
+The Coherence logging format is defined using [logging-config](http://coherence.oracle.com/display/COH35UG/logging-config) element in your configuration. By default it is set a format that looks similar to this:
+
+	2013-09-19 06:39:11.133 Oracle Coherence GE <Info> (thread=Cluster, member=1): Loaded included POF configuration from "jar:file:/home/logscape/coherence/prod/market-data/lib/coherence.jar!/coherence-pof-config.xml"
+	2013-09-19 06:39:11.212 Oracle Coherence GE <D5> (thread=Invocation:Management, member=1): Service Management joined the cluster with senior service member 1
+
+Override your logging-config to this:
+
+	```xml
+        <logging-config>
+                <!--message-format>{date}/{uptime} {product} {version} &lt;{level}&gt; (thread={thread}, member={member}): {text}
+                </message-format-->
+
+                <message-format>{date}/{uptime} {product} {version} &lt;{level}&gt; (thread={thread}, member={member}, role={role}, location={location}): {text}
+           </message-format>
+        </logging-config>
+	```
+
+To get the ROLE and LOCATION attributes inserted into your log data. The output of your Coherence log4j logs should now look like this:
+
+
+	2013-09-19 06:54:37.360/0.876 Oracle Coherence GE 3.6.1.0 <Info> (thread=main, member=n/a, role=, location=): Loaded Reporter configuration from "jar:file:/home/logscape/coherence/prod/market-data/lib/coherence.jar!/reports/report-group.xml"
 
 ### Set Coherence Garbage Collection
 
