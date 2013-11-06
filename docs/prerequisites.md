@@ -6,10 +6,10 @@ Oracle JMX Reporting provides insight into the health of your Coherence Cluster 
 
 1. Instruct the management node to use Java RMI. The example below is a naive setting to get you started
 
-  	-Dtangosol.coherence.management.report.autostart=true
-	 -Dcom.sun.management.jmxremote.ssl=false
-	 -Dcom.sun.management.jmxremote.authenticate=false
-	 -Dtangosol.coherence.management=all
+		-Dtangosol.coherence.management.report.autostart=true
+		 -Dcom.sun.management.jmxremote.ssl=false
+		 -Dcom.sun.management.jmxremote.authenticate=false
+		 -Dtangosol.coherence.management=all
 
 2. Your reporting node needs to be configured to use enable all the valid reports. The example below points to the report-all.xml found in the coherence-3.XX.jar. Update this to reflect your environment
 
@@ -49,25 +49,23 @@ Make sure that your log4j.properties file is in the classpath
 
 The Coherence logging format is defined using [logging-config](http://coherence.oracle.com/display/COH35UG/logging-config) element in your configuration. By default it is set a format that looks similar to this:
 
-	2013-09-19 06:39:11.133 Oracle Coherence GE <Info> (thread=Cluster, member=1): Loaded included POF configuration from "jar:file:/home/logscape/coherence/prod/market-data/lib/coherence.jar!/coherence-pof-config.xml"
-	2013-09-19 06:39:11.212 Oracle Coherence GE <D5> (thread=Invocation:Management, member=1): Service Management joined the cluster with senior service member 1
+		2013-09-19 06:39:11.133 Oracle Coherence GE <Info> (thread=Cluster, member=1): Loaded included POF configuration from "jar:file:/home/logscape/coherence/prod/market-data/lib/coherence.jar!/coherence-pof-config.xml"
+		2013-09-19 06:39:11.212 Oracle Coherence GE <D5> (thread=Invocation:Management, member=1): Service Management joined the cluster with senior service member 1
 
 Override your logging-config to this:
 
-	```xml
-        <logging-config>
-                <!--message-format>{date}/{uptime} {product} {version} &lt;{level}&gt; (thread={thread}, member={member}): {text}
-                </message-format-->
+	        <logging-config>
+	                <!--message-format>{date}/{uptime} {product} {version} &lt;{level}&gt; (thread={thread}, member={member}): {text}
+	                </message-format-->
 
-                <message-format>{date}/{uptime} {product} {version} &lt;{level}&gt; (thread={thread}, member={member}, role={role}, location={location}): {text}
-           </message-format>
-        </logging-config>
-	```
+	                <message-format>{date}/{uptime} {product} {version} &lt;{level}&gt; (thread={thread}, member={member}, role={role}, location={location}): {text}
+	           </message-format>
+	        </logging-config>
 
 To get the ROLE and LOCATION attributes inserted into your log data. The output of your Coherence log4j logs should now look like this:
 
 
-	2013-09-19 06:54:37.360/0.876 Oracle Coherence GE 3.6.1.0 <Info> (thread=main, member=n/a, role=, location=): Loaded Reporter configuration from "jar:file:/home/logscape/coherence/prod/market-data/lib/coherence.jar!/reports/report-group.xml"
+		2013-09-19 06:54:37.360/0.876 Oracle Coherence GE 3.6.1.0 <Info> (thread=main, member=n/a, role=, location=): Loaded Reporter configuration from "jar:file:/home/logscape/coherence/prod/market-data/lib/coherence.jar!/reports/report-group.xml"
 
 ### Set Coherence Garbage Collection
 
@@ -77,13 +75,13 @@ coherence services.
 
 Set the following properties:
 
-	-verbosegc -XX:+PrintGCDetails     (this enables gc logging )
+		-verbosegc -XX:+PrintGCDetails     (this enables gc logging )
 
-	-Xloggc:xxxx.log                      (redirects the output to the log)
+		-Xloggc:xxxx.log                      (redirects the output to the log)
 
-	-XX:+PrintGCDateStamps              -  this flag time stamps your logs ( highly recommended )
+		-XX:+PrintGCDateStamps              -  this flag time stamps your logs ( highly recommended )
 
 Sample output from a gc log file:
 
-	2011-11-21T13:42:27.624+0000: 14356.771: [GC 14356.771: [ParNew: 104960K->4875K(118016K), 0.0051590 secs] 129566K->29482K(1035520K), 0.0052400 secs] [Times: user=0.04 sys=0.00, real=0.00 secs]
+		2011-11-21T13:42:27.624+0000: 14356.771: [GC 14356.771: [ParNew: 104960K->4875K(118016K), 0.0051590 secs] 129566K->29482K(1035520K), 0.0052400 secs] [Times: user=0.04 sys=0.00, real=0.00 secs]
 
