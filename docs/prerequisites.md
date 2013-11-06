@@ -62,7 +62,7 @@ Coherence should be configure to redirect output from stdout to a file. Add the 
 
 Make sure that your log4j.properties file is in the classpath
 
-#### Updating your Coherence logging format. 
+**Updating your Coherence logging format**. 
 
 The Coherence logging format is defined using [logging-config](http://coherence.oracle.com/display/COH35UG/logging-config) element in your configuration. By default it is set a format that looks similar to this:
 
