@@ -2,16 +2,16 @@
 
 ### Set up Coherence JMX Reporting 
 
-Oracle JMX Reporting provides insight into the health of your Coherence Cluster by providing operational metrics on our Caches, Nodes and Services. 
+Oracle JMX Reporting provides insight into the health of your Coherence Cluster by providing operational metrics on your Caches, Nodes and Services. 
 
-1. Instruct the management node to use Java RMI. The example below is a naive setting to get you started
++ Instruct the management node to use Java RMI. The example below is a naive setting to get you startedi
 
 		-Dtangosol.coherence.management.report.autostart=true
 		 -Dcom.sun.management.jmxremote.ssl=false
 		 -Dcom.sun.management.jmxremote.authenticate=false
 		 -Dtangosol.coherence.management=all
 
-2. Your reporting node needs to be configured to use enable all the valid reports. The example below points to the report-all.xml found in the coherence-3.XX.jar. Update this to reflect your environment
++ Your reporting node needs to be configured to use enable all the valid reports. The example below points to the report-all.xml found in the coherence-3.XX.jar. Update this to reflect your environment
 
 		: -Dtangosol.coherence.management.report.configuration=config/report-all.xml
 
@@ -20,9 +20,9 @@ Here are some useful links on enabling Management Reporting in Coherence:
    - [Management Reporitng](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/intro.htm#CEGGICFE)
    - [JMX Reporting](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/reporter.htm#CHDECBIE)
 
-3. The others nodes should all be running with the following system properties: -Dtangosol.coherence.management=local-only -Dtangosol.coherence.management.remote=true
++ The others nodes should all be running with the following system properties: -Dtangosol.coherence.management=local-only -Dtangosol.coherence.management.remote=true
  
-4. Cache configuration needs to have local-scheme/unit-calculator set to binary (to report byte use) - as shown in the coherence-cache-config.xml - and the proxy service names should contain proxy.
++ Cache configuration needs to have local-scheme/unit-calculator set to binary (to report byte use) - as shown in the coherence-cache-config.xml - and the proxy service names should contain proxy.
 
 	An explanation of the contents of the Coherence log file data can be found [here](http://coherence.oracle.com/display/COH35UG/Analyzing+Reporter+Content).
 
