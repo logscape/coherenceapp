@@ -22,7 +22,10 @@ Oracle JMX Reporting provides insight into the health of your Coherence Cluster 
 		: -Dtangosol.coherence.management.report.configuration=config/report-all.xml
 
 
-+ The others nodes should all be running with the following system properties: -Dtangosol.coherence.management=local-only -Dtangosol.coherence.management.remote=true
++ The others nodes should all be running with the following system properties:
+
+		-Dtangosol.coherence.management=local-only 
+		-Dtangosol.coherence.management.remote=true
  
 + Cache configuration needs to have local-scheme/unit-calculator set to binary (to report byte use) - as shown in the coherence-cache-config.xml - and the proxy service names should contain proxy.
 
