@@ -3,6 +3,8 @@
 ### Set up Coherence JMX Reporting 
 
 
+Here are some useful links on enabling Management Reporting in Coherence:
+
    - [Management Reporitng](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/intro.htm#CEGGICFE)
    - [JMX Reporting](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/reporter.htm#CHDECBIE)
 
@@ -19,7 +21,6 @@ Oracle JMX Reporting provides insight into the health of your Coherence Cluster 
 
 		: -Dtangosol.coherence.management.report.configuration=config/report-all.xml
 
-Here are some useful links on enabling Management Reporting in Coherence:
 
 + The others nodes should all be running with the following system properties: -Dtangosol.coherence.management=local-only -Dtangosol.coherence.management.remote=true
  
