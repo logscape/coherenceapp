@@ -29,6 +29,18 @@ Oracle JMX Reporting provides insight into the health of your Coherence Cluster 
  
 + Cache configuration needs to have local-scheme/unit-calculator set to binary (to report byte use) - as shown in the coherence-cache-config.xml - and the proxy service names should contain proxy.
 
+		<distributed-scheme>
+                        <scheme-name>core-distributed</scheme-name>
+                        <service-name>DistributedCacheCore</service-name>
+                        <backing-map-scheme>
+                                <local-scheme>
+                                        <unit-calculator>BINARY</unit-calculator>
+                                </local-scheme>
+                        </backing-map-scheme>
+                        <autostart>true</autostart>
+                </distributed-scheme>
+
+
 	An explanation of the contents of the Coherence log file data can be found [here](http://coherence.oracle.com/display/COH35UG/Analyzing+Reporter+Content).
 
 
