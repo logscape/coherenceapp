@@ -1,20 +1,15 @@
 ## Prerequisites 
 
 
-Before using the Coherence App your cluster needs to have 
+Before using the Coherence App your cluster needs to have the following enabled:
 
-* JMX Reporting enalbed
-* GC logging enabled 
-* log4j logging set up correctly. 
+* JMX Reporting.
+* GC logging. 
+* log4j logging set up correctly
 
 
 ### Set up Coherence JMX Reporting 
 
-
-Here are some useful links on enabling Management Reporting in Coherence:
-
-   - [Management Reporitng](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/intro.htm#CEGGICFE)
-   - [JMX Reporting](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/reporter.htm#CHDECBIE)
 
 Oracle JMX Reporting provides insight into the health of your Coherence Cluster by providing operational metrics on your Caches, Nodes and Services. 
 
@@ -51,14 +46,10 @@ Oracle JMX Reporting provides insight into the health of your Coherence Cluster 
 
 	An explanation of the contents of the Coherence log file data can be found [here](http://coherence.oracle.com/display/COH35UG/Analyzing+Reporter+Content).
 
+Here are some useful links on enabling Management Reporting in Coherence:
 
-### Set up Coherence for GC logging
-
-Metrics on  memory utilization of your Cohereence  Cluster  is provided by enabling ConcurrenctMarkSweep for the garbage collector. This follows [Oracle Best Practices](http://coherence.oracle.com/display/COH35UG/Best+Practices#BestPractices-HeapSizeConsiderations)
-
-Set up the following system property:
-
-	-XX:+UseConcMarkSweepGC.
+   - [Management Reporitng](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/intro.htm#CEGGICFE)
+   - [JMX Reporting](http://docs.oracle.com/cd/E18686_01/coh.37/e18682/reporter.htm#CHDECBIE)
 
 ### Set up Coherence to log to file 
 
@@ -92,7 +83,16 @@ To get the ROLE and LOCATION attributes inserted into your log data. The output 
 
 		2013-09-19 06:54:37.360/0.876 Oracle Coherence GE 3.6.1.0 <Info> (thread=main, member=n/a, role=, location=): Loaded Reporter configuration from "jar:file:/home/logscape/coherence/prod/market-data/lib/coherence.jar!/reports/report-group.xml"
 
-### Set Coherence Garbage Collection
+
+### Set up Coherence for GC logging
+
+Metrics on  memory utilization of your Cohereence  Cluster  is provided by enabling ConcurrenctMarkSweep for the garbage collector. This follows [Oracle Best Practices](http://coherence.oracle.com/display/COH35UG/Best+Practices#BestPractices-HeapSizeConsiderations)
+
+Set up the following system property:
+
+	-XX:+UseConcMarkSweepGC.
+
+
 
 One of the major causes of system lock-ups in a Coherence cluster is a major Garbage Collection event. This endangers the 
 reliability of the data stored in your Coherence cluster. It is important to monitor the Garbage Collector and the Heap Utilisation of your 
@@ -109,4 +109,6 @@ Set the following properties:
 Sample output from a gc log file:
 
 		2011-11-21T13:42:27.624+0000: 14356.771: [GC 14356.771: [ParNew: 104960K->4875K(118016K), 0.0051590 secs] 129566K->29482K(1035520K), 0.0052400 secs] [Times: user=0.04 sys=0.00, real=0.00 secs]
+
+
 
