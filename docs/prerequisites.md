@@ -1,4 +1,12 @@
-## Prerequisites
+## Prerequisites 
+
+
+Before using the Coherence App your cluster needs to have 
+
+* JMX Reporting enalbed
+* GC logging enabled 
+* log4j logging set up correctly. 
+
 
 ### Set up Coherence JMX Reporting 
 
