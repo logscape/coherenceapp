@@ -12,7 +12,7 @@ Monitor hundreds of Coherence nodes using the CoherenceApp. The Coherence App wi
 
 ## QuickStart
 
-Please read how to setup Coherence before proceeding   [prerequisites](docs/prerequisites.md) 
+Please read how to setup Coherence before proceeding:   [Coherence Configuration](docs/prerequisites.md) 
 
 
 1. Download the CoherenceApp and Overrides file.( CoherenceApp Download Page ). 
